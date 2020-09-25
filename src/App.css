@@ -1,0 +1,16 @@
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app >h1 {
+    font-size: 100px;
+    color:rgb(90, 172, 254);
+    margin-right: 50px;;
+    
+}
+.app__textButton {
+    margin-top: 50px;
+    padding:20px
+}
