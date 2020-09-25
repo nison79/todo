@@ -4,13 +4,15 @@
     align-items: center;
 }
 
-.app >h1 {
+.app__title {
     font-size: 100px;
     color:rgb(90, 172, 254);
     margin-right: 50px;;
     
 }
 .app__textButton {
+    align-items: center;
     margin-top: 50px;
     padding:20px
 }
+

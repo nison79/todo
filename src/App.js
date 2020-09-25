@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import './App.css';
 import { Button, TextField } from "@material-ui/core"
 import Todo from "./Todo"
+import {useSpring, animated} from 'react-spring'
 
 
 function App() {
+  const props = useSpring({opacity:1,color:"rgb(37, 206, 209)",fontSize:"70px" , from:{opacity:0 ,fontSize:"5px",color:"black"}})
   const [inputText,setInputText] = useState("");
   const [todos,setTodos] = useState([]);
 
@@ -18,7 +20,8 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Plan your Day</h1>
+      <animated.div  style={props}><h1>Plan your Day</h1></animated.div>
+            
       <div className = "app__textButton">
         <form>
           <TextField
@@ -32,7 +35,7 @@ function App() {
           size= "large"
           disabled ={!inputText}
           type = "submit"
-          style ={{marginLeft : "40px" , background: "pink",color:"black"}}
+          style ={{marginLeft : "40px" , background: "rgb(119, 172, 162)",color:"white",}}
           color = "secondary"
           variant = "outlined" 
           onClick ={addATodo} >
